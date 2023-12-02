@@ -47,9 +47,9 @@ class MonsterDatabase:
             evol_options = evolution_data[monster_id]
             # List to hold the evolution pathways
             evolution_pathways = []
-            # For each monster ID in the list of possibly options
+            # For each monster ID in the list of possible options
             for i_monster_id in evol_options:
-                # Recursively call the function for connected keys
+                # Recursively call the function to build evolution pathways
                 evolution_pathways.extend(self._get_monster_evolution(i_monster_id))
             # Return the input monster id, and the output paths as a [[]]
             id_paths = [[monster_id] + path for path in evolution_pathways]

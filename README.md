@@ -33,7 +33,7 @@ Evolution:
 
 ---------------------------------------
 
-python pokedex.py  ./data.csv octopeat
+$ python pokedex.py  ./data.csv octopeat
 
 ID:
     043

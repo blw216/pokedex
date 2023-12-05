@@ -42,7 +42,7 @@ class MonsterDatabase:
     def _get_monster_evolution(self, monster_id):
         # Get the evolution path data
         evolution_data = self.evolution_options
-        # base case; If the monster has an evolution path
+        # recursive case; If the monster has an evolution path
         if monster_id in evolution_data and evolution_data[monster_id]:
             evol_options = evolution_data[monster_id]
             # List to hold the evolution pathways
@@ -54,6 +54,7 @@ class MonsterDatabase:
             # Return the input monster id, and the output paths as a [[]]
             id_paths = [[monster_id] + path for path in evolution_pathways]
             return id_paths
+        # base case; monster has no further (or none at all) evolution path
         else:
             return [[monster_id]]
     
